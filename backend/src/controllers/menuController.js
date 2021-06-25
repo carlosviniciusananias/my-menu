@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
-
-const Menu = require('../models/menu');
-
+const Menu = require('../models/Menus');
+ 
 module.exports = {
-    async index(req, res) {
-        const menus = await Menu.find();
+	//listagem
+	async index(req, res) {
+		const menus = await Menu.find();
 
-        return res.json(menus)
-    },
+		return res.json(menus);
+	},
+
     
-    async store(req, res) {
-        const menus = await Menu.create({
+    async store(req, res){
+        const menu = await Menu.create({
             name: req.body.name,
-            image: req.body.image,
-            description: req.body.description,
-            price: req.body.price,    
+            type: req.body.type,
+            age: req.body.age,
+            value: req.body.value
         })
-
         return res.json(menu)
     }
 }
