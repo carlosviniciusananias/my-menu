@@ -3,7 +3,7 @@ const routes = express.Router();
 
 const MenuController = require('./controllers/MenuController');
 
-routes.get('/menu', MenuController.index);
-routes.post('/menu', MenuController.store);
+routes.get('/menu', MenuController.list);
+routes.post('/menu', MenuController.created);
 
 module.exports = routes;
