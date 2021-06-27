@@ -23,7 +23,15 @@ const List = () => {
         return (
             <>
                 {array.map((menu: any, index) => (
-                    <h1 key={index}>{menu.name}</h1>
+                    <div key={index}>
+                        <h1>{menu.name}</h1>
+                        <h2>{menu.type}</h2>
+                        <p>{menu.description}</p>
+                        <div>
+                            <span>{menu.sellingPrice}</span>
+                            <span>{menu.bestPrice}</span>
+                        </div>
+                    </div>
                 ))}
             </>
         );

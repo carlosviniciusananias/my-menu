@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import axios from "axios"
 import { useForm } from "react-hook-form"
 
-import { Block, Label, Error } from './Styled'
+import { Block, Label, Error, Button } from './Styled'
 
 const Create = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -25,8 +25,8 @@ const Create = () => {
                     name: data.name,
                     type: data.type,
                     description: data.description,
-                    sellingPrice: Number(data.sellingPrice),
-                    bestPrice: Number(data.bestPrice),
+                    sellingPrice: data.sellingPrice,
+                    bestPrice: data.bestPrice,
                 }
             })
                 .then(function (response) {
@@ -72,7 +72,7 @@ const Create = () => {
                     {errors.bestPrice && <Error>This best price field is required</Error>}
                 </Block>
 
-                <input type="submit" />
+                <Button type="submit" />
             </form>
         );
     };

@@ -12,3 +12,5 @@ export const Error = styled.span`
     font-size: 12px;
     margin-top: 2px;
 `
+
+export const Button = styled.input``
