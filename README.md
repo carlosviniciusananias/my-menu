@@ -1,4 +1,4 @@
-# Challenge for EatTasty
+# My Menu
 
 * **Resume:** A basic project using nodejs, express, nodemoon and mongoose in the backend and react with styled components in the frontend.
 
